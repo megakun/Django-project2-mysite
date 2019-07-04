@@ -1,0 +1,23 @@
+<!--list.html-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset  = 'utf-8'>
+<title>Useless chart</title>
+</head>
+<body>
+<h2>Metal Gear Solid Char list</h2>
+<hr>
+<table width = 500 border = 1 bgcolor = '#85C1E9'>
+    <tr><td>name</td><td>bouns</td><td>num</td></tr>
+{% for p in products %}
+    <tr>
+      <td>{{p.name}}</td>
+      <td>{{p.price}}</td>  
+      <td>{{p.qty}}</td>  
+    </tr> 
+{% endfor %} 
+</table>
+</body>
+</html>
+
