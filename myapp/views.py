@@ -19,14 +19,13 @@ def listing(request):
     return HttpResponse(html)#reformat and insert main body
 
 def disp_detail(request, sku):
-
     try: 
         p = Product.objects.get(sku = sku) # this is fairly important 
     except Product.DoesNotExist:
         raise Http404('Wrong place hahaha')
-  
+    num = p.sku
     template = get_template('disp.html')
-    html = template.render({'product': p})#assign p to product for the template
+    html = template.render({'product': p ,'num': num})#assign p to product for the template
     return HttpResponse(html)
 
 def index(request):

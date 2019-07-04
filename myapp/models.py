@@ -21,5 +21,5 @@ class Product(models.Model):
     size = models.CharField(max_length=1 , choices = SIZES)
     qty = models.PositiveIntegerField(default = 0)
 
-    def _unicode_ (self):
+    def _str_ (self):
         return self.name

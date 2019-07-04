@@ -21,7 +21,8 @@ from django.conf.urls import url
 urlpatterns = [
     url(r'^about/', about),
     url(r'^list/$', listing),
-    url(r'^list/([0-9a-zA-Z]+)/$', disp_detail),
+    url(r'^list/([0-9a-zA-Z]+)/$', disp_detail, name = 'detail'),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index )
+    url(r'^$', index ),
+    url(r'',index)
 ]
